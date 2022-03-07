@@ -1,14 +1,14 @@
 import logo from '../img/logo.png';
-import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 const Logo = () => {
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Link sx={{ display: 'flex',color:"black" }} href="/" underline="none">
             <div>
               <img src={logo} alt="logo" />
             </div>
-            <h2>匯融科技</h2>
-        </Box>
+            <h1>匯融科技</h1>
+        </Link>
     );
 
 }

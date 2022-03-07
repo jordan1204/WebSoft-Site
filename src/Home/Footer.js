@@ -7,15 +7,19 @@ const useStyles = makeStyles({
         paddingLeft:'16px'
     },
     Address: {
-        marginBottom:'2em',
+        marginBottom: '2em',
+        fontSize:'18px'
     },
     PhoneNumber: {
-        fontSize: '0.8em',
+        fontSize: '1em',
         color:'gray'
     },
     AddressText: {
-        fontSize: '0.8em',
+        fontSize: '1em',
         color:'gray'
+    },
+    Phone: {
+        fontSize:'18px'
     }
   });
 
@@ -37,11 +41,11 @@ const Footer = () => {
                         公司地址
                     </div>
                     <div className={classes.AddressText}>
-                        新竹縣竹北市縣政三路62號 2F
+                        新竹縣竹北市光明三路62號 2F
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div className={classes.Phone}>
                         連絡電話
                     </div>
                     <div className={classes.PhoneNumber}>

@@ -17,11 +17,12 @@ const useStyles = makeStyles({
         position:'relative',
         '&:before': {
             content: "'\\1F836'",
-            color: 'blue',
+            color: '#1976d2',
             left: 0,
             position: 'absolute'
         },
-        paddingInlineStart:'2em'
+        paddingInlineStart: '2em',
+        fontSize:'18px'
     }
 });
   
@@ -30,8 +31,7 @@ const theme = createTheme({
       MuiDivider: {
         styleOverrides: {
           root: {
-            borderWidth: '1px',
-            borderColor:'black'
+            borderColor:'rgba(0,0,0,0.5)'
           },
         },
       },
@@ -42,50 +42,50 @@ const Customers = () => {
     const classes = useStyles();
     return (
         <FormControl component="article" fullWidth>
-            <h3>
+            <h2>
                 客戶案例
-            </h3>
+            </h2>
             <ThemeProvider theme={theme}>
                 <Divider />
             </ThemeProvider>
             <Grid container spacing={2} component="ul">
                 <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
-                    <h4>工廠設備管理系統</h4>
+                    <h3>工廠設備管理系統</h3>
                     <ul className={classes.DetailContainer}>
-                        {CustomerGroups.EMS.map(function (item) { 
-                            return <li className={classes.DetailItem}>{item}</li>
+                        {CustomerGroups.EMS.map(function (item,index) { 
+                            return <li className={classes.DetailItem} key={index}>{item}</li>
                         })}
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
-                    <h4>WMS倉儲管理</h4>
+                    <h3>WMS倉儲管理</h3>
                     <ul className={classes.DetailContainer}>
-                        {CustomerGroups.WMS.map(function (item) { 
-                            return <li className={classes.DetailItem}>{item}</li>
+                        {CustomerGroups.WMS.map(function (item,index) { 
+                            return <li className={classes.DetailItem} key={index}>{item}</li>
                         })}
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
-                    <h4>MES系統導入</h4>
+                    <h3>MES系統導入</h3>
                     <ul className={classes.DetailContainer}>
-                        {CustomerGroups.MES.map(function (item) { 
-                            return <li className={classes.DetailItem}>{item}</li>
+                        {CustomerGroups.MES.map(function (item,index) { 
+                            return <li className={classes.DetailItem} key={index}>{item}</li>
                         })}
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
-                    <h4>企業委外軟體開發</h4>
+                    <h3>企業委外軟體開發</h3>
                     <ul className={classes.DetailContainer}>
-                        {CustomerGroups.Delegation.map(function (item) { 
-                            return <li className={classes.DetailItem}><span>{item}</span></li>
+                        {CustomerGroups.Delegation.map(function (item,index) { 
+                            return <li className={classes.DetailItem} key={index}><span>{item}</span></li>
                         })}
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
-                    <h4>Android{' '}App</h4>
+                    <h3>Android{' '}APP</h3>
                     <ul className={classes.DetailContainer}>
-                        {CustomerGroups.Android.map(function (item) { 
-                            return <li className={classes.DetailItem}>{item}</li>
+                        {CustomerGroups.Android.map(function (item,index) { 
+                            return <li className={classes.DetailItem} key={index}>{item}</li>
                         })}
                     </ul>
                 </Grid>

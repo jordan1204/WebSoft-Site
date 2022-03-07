@@ -2,9 +2,11 @@ import React from 'react';
 import {
   BrowserRouter ,
   Route,
-  Routes
+  Routes,
 } from "react-router-dom";
-import Home from './Home/Index.js';
+import PageLayout from "./Layout/PageLayout";
+import Home from './Home/Index';
+import About from './About/Index';
 import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
@@ -13,7 +15,10 @@ function App() {
       <CssBaseline enableColorScheme/>
       <BrowserRouter>
       <Routes>
-        <Route index path="/" element={ <Home/>}/>
+        <Route element={<PageLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+        </Route>
       </Routes>
       </BrowserRouter>
     </React.Fragment>

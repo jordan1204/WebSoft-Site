@@ -5,14 +5,15 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles({
     AnchorMenuItem: {
         textDecoration: 'none',
-        color:'black'
+        color: 'black',
+        fontSize:'1.5em'
     },
     MenuItem: {
         listStyleType:'none',
-        textAlign: 'center'
     },
     Nav: {
-        marginBottom:'100px'
+        marginBottom:'100px',
+        backgroundColor:'#bac4e8'
     }
   });
 
@@ -21,7 +22,7 @@ const Menu = () => {
     return (
         <Grid container spacing={2} component="nav" className={classes.Nav}>
             <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
-                <Link to="/" className={classes.AnchorMenuItem}>關於我們</Link>
+                <Link to="/about" className={classes.AnchorMenuItem}>關於我們</Link>
             </Grid>
             <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
                 <Link to="/" className={classes.AnchorMenuItem}>提供服務</Link>
