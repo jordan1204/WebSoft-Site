@@ -1,6 +1,9 @@
 import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import Menus from '../DataBaseTables/Menus';
 
 const useStyles = makeStyles({
     AnchorMenuItem: {
@@ -13,26 +16,22 @@ const useStyles = makeStyles({
     },
     Nav: {
         marginBottom:'100px',
-        backgroundColor:'#bac4e8'
     }
   });
 
 const Menu = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
     return (
         <Grid container spacing={2} component="nav" className={classes.Nav}>
-            <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
-                <Link to="/about" className={classes.AnchorMenuItem}>關於我們</Link>
-            </Grid>
-            <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
-                <Link to="/" className={classes.AnchorMenuItem}>提供服務</Link>
-            </Grid>
-            <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
-                <Link to="/" className={classes.AnchorMenuItem}>產品介紹</Link>
-            </Grid>
-            <Grid item xs={12} md={3} component="li" className={classes.MenuItem}>
-                <Link to="/" className={classes.AnchorMenuItem}>聯絡我們</Link>
-            </Grid>
+            {
+                Menus.map(function (item,index) {
+                    return (<Grid item xs={12} md={3} component="li" className={classes.MenuItem} key={index}>
+                        <Link to={item.Href} className={classes.AnchorMenuItem} style={matches ? {marginLeft:'0px'} : {marginLeft:'48px'}}>{item.Text}</Link>
+                            </Grid>);
+                })
+            }
         </Grid>
     );
 }

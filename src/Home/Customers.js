@@ -1,6 +1,6 @@
 import FormControl from '@mui/material/FormControl';
 import Grid from '@mui/material/Grid';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import CustomerGroups from '../DataBaseTables/Customer';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
@@ -49,7 +49,7 @@ const Customers = () => {
                 <Divider />
             </ThemeProvider>
             <Grid container spacing={2} component="ul">
-                <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
+                <Grid item xs={12} md={6} lg={2} component="li" className={classes.CustomersItem}>
                     <h3>工廠設備管理系統</h3>
                     <ul className={classes.DetailContainer}>
                         {CustomerGroups.EMS.map(function (item,index) { 
@@ -57,7 +57,7 @@ const Customers = () => {
                         })}
                     </ul>
                 </Grid>
-                <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
+                <Grid item xs={12} md={6} lg={2} component="li" className={classes.CustomersItem}>
                     <h3>WMS倉儲管理</h3>
                     <ul className={classes.DetailContainer}>
                         {CustomerGroups.WMS.map(function (item,index) { 
@@ -65,7 +65,7 @@ const Customers = () => {
                         })}
                     </ul>
                 </Grid>
-                <Grid item xs={12} md={6} lg={3} component="li" className={classes.CustomersItem}>
+                <Grid item xs={12} md={6} lg={2} component="li" className={classes.CustomersItem}>
                     <h3>MES系統導入</h3>
                     <ul className={classes.DetailContainer}>
                         {CustomerGroups.MES.map(function (item,index) { 
