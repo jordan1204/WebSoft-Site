@@ -1,6 +1,5 @@
 import Menu from './Menu';
 import Logo from './Logo';
-import Container from '@mui/material/Container';
 import { Outlet } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -11,11 +10,14 @@ import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const useStyles = makeStyles({
-    header: {
+    Header: {
         width: "100%",
-        backgroundColor: '#bac4e8',
         position: "relative",
-    },
+        backgroundColor: "#bac4e8"
+  },
+  Main: {
+    paddingLeft:"24px", paddingRight:"24px"
+  }
   });
   const themeprovider = createTheme({
     components: {
@@ -51,20 +53,22 @@ const PageLayout = () => {
     const ToggleMenu = () => {
         setOpen((prev) => !prev);
     }
-    return (
-        <Container maxWidth="xl">
-            <ThemeProvider theme={themeprovider}>
-                <header className={classes.header} style={matches?{height:"300px"}:{}}>
-                    <Logo />
-                    {matches?<Menu />: <Collapse in={open} timeout="auto">
-                                            <Menu />
-                                        </Collapse>
-                    }
-                    {matches ? null : <IconButton onClick={ToggleMenu}><MenuIcon/></IconButton>}
-            </header>
-            </ThemeProvider>
-            <Outlet/>
-        </Container>
+  return (
+    <div>
+      <ThemeProvider theme={themeprovider}>
+        <header className={classes.Header} style={matches ? { height: "300px" } : {}}>
+          <Logo />
+          {matches ? <Menu /> : <Collapse in={open} timeout="auto">
+            <Menu />
+          </Collapse>
+          }
+          {matches ? null : <IconButton onClick={ToggleMenu}><MenuIcon /></IconButton>}
+        </header>
+      </ThemeProvider>
+      <main className={classes.Main}>
+        <Outlet />
+      </main>
+    </div>
     );
 }
 
