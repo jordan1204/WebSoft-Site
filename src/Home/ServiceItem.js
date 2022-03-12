@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
-import ServiceGroups from '../DataBaseTables/Service';
+import ServiceGroups from '../ListGroups/Service';
 
 const useStyles = makeStyles({
     ServiceItem: {

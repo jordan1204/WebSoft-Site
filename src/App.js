@@ -7,6 +7,7 @@ import {
 import PageLayout from "./Layout/PageLayout";
 import Home from './Home/Index';
 import About from './About/Index';
+import TechApplication from './TechApplication/Index.js';
 import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route element={<PageLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/techapplication" element={<TechApplication />} />
         </Route>
       </Routes>
       </BrowserRouter>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Menus from '../DataBaseTables/Menus';
+import Menus from '../ListGroups/Menus';
 
 const useStyles = makeStyles({
     AnchorMenuItem: {
