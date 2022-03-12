@@ -6,6 +6,9 @@ const useStyles = makeStyles({
     Logo: {
         paddingTop: '0.67em',
         paddingBottom:'0.67em'
+    },
+    CompanyName: {
+        color:"white"
     }
   });
 
@@ -16,7 +19,7 @@ const Logo = () => {
             <div className={classes.Logo}>
               <img src={logo} alt="logo" />
             </div>
-            <h1>匯融科技</h1>
+            <h1 className={classes.CompanyName}>匯融科技</h1>
         </Link>
     );
 

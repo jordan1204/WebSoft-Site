@@ -8,7 +8,7 @@ import Menus from '../ListGroups/Menus';
 const useStyles = makeStyles({
     AnchorMenuItem: {
         textDecoration: 'none',
-        color: 'black',
+        color: 'white',
         fontSize: '1.5em',
     },
     MenuItem: {
@@ -28,7 +28,9 @@ const Menu = () => {
             {
                 Menus.map(function (item,index) {
                     return (<Grid item xs={12} md={3} component="li" className={classes.MenuItem} key={index}>
-                        <Link to={item.Href} className={classes.AnchorMenuItem} style={matches ? {marginLeft:'24px'} : {marginLeft:'48px'}}>{item.Text}</Link>
+                        <Link to={item.Href} className={classes.AnchorMenuItem} style={matches ? { marginLeft: '24px' } : { marginLeft: '48px' }}>
+                            {item.Text}
+                        </Link>
                             </Grid>);
                 })
             }
