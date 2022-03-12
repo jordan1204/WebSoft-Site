@@ -8,6 +8,7 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import Footer from './Footer';
 
 const useStyles = makeStyles({
     Header: {
@@ -68,6 +69,7 @@ const PageLayout = () => {
       <main className={classes.Main}>
         <Outlet />
       </main>
+      <Footer/>
     </div>
     );
 }

@@ -3,6 +3,7 @@ import 'react-multi-carousel/lib/styles.css';
 import TechGroups from '../ListGroups/Techs';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
+import TechExplanation from './TechExplanation';
 
 const useStyles = makeStyles({
     CarouselItem: {
@@ -43,15 +44,21 @@ const responsive = {
 const Carousels = () => {
     const classes = useStyles();
     const [clicked, setClicked] = useState(new Array(TechGroups.length));
+    const [legendtext, setLegendText] = useState("");
+    const [clickedindex, setIndex] = useState(-1);
     const onClickCarouselItem = (index) => {
         for (let i = 0; i < clicked.length; i++){
             clicked[i] = false;
         }
         clicked[index] = true;
         setClicked([...clicked]);
+        setLegendText(TechGroups[index].Text);
+        setIndex(index);
     }
     return (
-        <Carousel responsive={responsive}
+        <>
+            <Carousel responsive={responsive}
+                draggble
                 swipeable shouldResetAutoplay={false}
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 itemClass={classes.CarouselItem}
@@ -63,6 +70,8 @@ const Carousels = () => {
                     </button>);
                 })}
             </Carousel>
+            <TechExplanation legendtext={legendtext} explanation={clickedindex>=0?TechGroups[clickedindex].Explanation:null}/>
+        </>
     );
 }
 

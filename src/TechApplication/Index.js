@@ -19,11 +19,13 @@ const Index = () => {
 
     
     return (
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <article>
             <h2>技術應用</h2>
             <Divider />
-            <Carousels/>
-        </ThemeProvider>
+          <Carousels />
+        </article>
+      </ThemeProvider>
     );
 }
 

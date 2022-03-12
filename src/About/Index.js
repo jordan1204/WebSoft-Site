@@ -18,6 +18,7 @@ const Index = () => {
 
     return (
         <ThemeProvider theme={theme}>
+            <article>
             <h2>關於我們</h2>
             <Divider />
             <Box component="p" sx={{ marginBottom: "50px" }}>
@@ -27,6 +28,7 @@ const Index = () => {
             </Box>
             <h3>辦公室位置</h3>
             <iframe title="本公司地址" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.9899982572547!2d121.00683011447697!3d24.8300156525933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836936a47031f%3A0x212e56fc2070b0cb!2zMzAy5paw56u557ij56u55YyX5biC5YWJ5piO5LiJ6LevNjLomZ8yZg!5e0!3m2!1szh-TW!2stw!4v1646466201729!5m2!1szh-TW!2stw" style={{ width: "100%" }} height="450"></iframe>
+            </article>
         </ThemeProvider>
 
     );
