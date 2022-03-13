@@ -1,7 +1,7 @@
 import FormControl from '@mui/material/FormControl';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
-import CustomerGroups from '../ListGroups/Customer';
+import CustomerGroups from '../ListGroups/Customers';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 

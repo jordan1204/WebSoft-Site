@@ -4,7 +4,8 @@ import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
-import ServiceGroups from '../ListGroups/Service';
+import ServiceGroups from '../ListGroups/Services';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     ServiceItem: {
@@ -66,7 +67,11 @@ const useStyles = makeStyles({
     },
     ServiceText: {
         fontSize: '18px',
-        textAlign: 'center'
+        textAlign: 'center',
+    },
+    AnchorServiceItem: {
+        textDecoration: "none",
+        color:"black"
     }
   });
 
@@ -115,11 +120,13 @@ const ServiceItem = () => {
                 {
                     ServiceGroups.map(function (item,index) {
                         return (<Grid item xs={12} md={item.Width} component="li" className={classes.ServiceItem} onMouseEnter={() => AnimateServiceItem(index)} onMouseLeave={() => RestoreServiceItem(index)} key={index}>
+                            <Link to={item.Href} className={classes.AnchorServiceItem}>
                                     <div className={`${classes.ServiceIcon} ${fades[index] ? classes.Transform : ""}`}>
                                         {item.Icon}
                                     </div>
                                     <div style={{display:fades[index]?"block":"none"}}className={`${classes.Highlight} ${fades[index]?classes.HighlightScale:""}`}></div>
                                     <div className={classes.ServiceText}>{item.Text}</div>
+                                </Link>
                                 </Grid>);
                      })   
                 }

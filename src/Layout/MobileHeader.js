@@ -6,11 +6,11 @@ import Menu from './Menu';
 import Logo from './Logo';
 import { useState } from 'react';
 import BackgroundSlider from 'react-background-slider';
-import webbanner01 from '../img/Banner/webbanner01.png';
-import webbanner02 from '../img/Banner/webbanner02.png';
-import webbanner03 from '../img/Banner/webbanner03.png';
-import webbanner04 from '../img/Banner/webbanner04.png';
-import webbanner05 from '../img/Banner/webbanner05.png';
+import webbanner01 from '../img/Banners/webbanner01.png';
+import webbanner02 from '../img/Banners/webbanner02.png';
+import webbanner03 from '../img/Banners/webbanner03.png';
+import webbanner04 from '../img/Banners/webbanner04.png';
+import webbanner05 from '../img/Banners/webbanner05.png';
 
 const useStyles = makeStyles({
     Header: {

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import PageLayout from "./Layout/PageLayout";
 import Home from './Home/Index';
+import Delegation from './Home/Delegation/Index.js';
 import About from './About/Index';
 import TechApplication from './TechApplication/Index.js';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/techapplication" element={<TechApplication />} />
+            <Route path="/Delegation" element={<Delegation/>}/>
         </Route>
       </Routes>
       </BrowserRouter>
