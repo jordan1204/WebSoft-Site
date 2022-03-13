@@ -17,7 +17,7 @@ const Logo = () => {
     return (
         <Link sx={{ display: 'inline-flex',color:"black",marginLeft:"24px" }} href="/" underline="none">
             <div className={classes.Logo}>
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" width="48" height="60"/>
             </div>
             <h1 className={classes.CompanyName}>匯融科技</h1>
         </Link>

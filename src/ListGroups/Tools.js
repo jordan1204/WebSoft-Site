@@ -10,7 +10,6 @@ import postgres from '../img/DeveloperTools/postgregsqlicon.PNG';
 import mongodb from '../img/DeveloperTools/mongodbicon.PNG';
 import mysql from '../img/DeveloperTools/mysqlicon.PNG';
 import sqlserver from '../img/DeveloperTools/sqlservericon.PNG';
-import SQL from '../img/DeveloperTools/SQL DBICON.PNG';
 
 const ToolGroups = [
     { Src: webmvc, Alt: "Web MVC" },
@@ -24,8 +23,7 @@ const ToolGroups = [
     { Src: postgres, Alt: "Postgres" },
     { Src: mongodb, Alt: "MongoDb" },
     { Src: mysql, Alt: "MySQL" },
-    { Src: sqlserver, Alt: "SQL Server" },
-    { Src: SQL, Alt: "SQL"}
+    { Src: sqlserver, Alt: "SQL Server" }
 ];
 
 export default ToolGroups;
