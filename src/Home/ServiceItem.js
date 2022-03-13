@@ -77,13 +77,6 @@ const useStyles = makeStyles({
 
   const theme = createTheme({
     components: {
-      MuiDivider: {
-        styleOverrides: {
-          root: {
-            borderColor:'rgba(0,0,0,0.5)'
-          },
-        },
-          },
           MuiSvgIcon: {
             styleOverrides: {
                 root: {
@@ -115,7 +108,7 @@ const ServiceItem = () => {
             <h2>
                 服務項目
             </h2>
-            <Divider />
+                <Divider style={{borderColor:"rgba(0,0,0,0.5)"}}/>
             <Grid container spacing={8} component="ul">
                 {
                     ServiceGroups.map(function (item,index) {
