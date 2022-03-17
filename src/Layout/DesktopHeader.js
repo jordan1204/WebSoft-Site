@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     Header: {
         width: "100%",
         position: "relative",
-        height:'600px'
+        height:window.screen.width*0.41+'px'
    },
 });
 

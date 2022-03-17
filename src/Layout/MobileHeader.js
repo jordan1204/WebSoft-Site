@@ -45,7 +45,7 @@ const MobileHeader = () => {
                     }} /></IconButton>
                 
             </header>
-            <article style={{width:"100%",position:'relative',height:"300px"}}>
+            <article style={{width:"100%",position:'relative',height:window.screen.width*0.41+"px"}}>
                 <BackgroundSlider
                 images={bannerlist}
                 duration={6}

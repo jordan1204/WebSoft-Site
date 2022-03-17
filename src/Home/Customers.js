@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         listStyleType: 'none',
         position:'relative',
         '&:before': {
-            content: "'\\1F836'",
+            content: "'\\27A4'",
             color: '#1976d2',
             left: 0,
             position: 'absolute'

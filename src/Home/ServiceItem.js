@@ -3,67 +3,32 @@ import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
-import { useState } from 'react';
 import ServiceGroups from '../ListGroups/Services';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     ServiceItem: {
         listStyleType: 'none',
-    },
-    Transform: {
-        animationName: "$iconTranslate",
-        animationTimingFunction: "linear",
-        animationDuration: "0.2s",
-        animationFillMode:"forwards",
+        "&:hover .icon":{
+            transform:"translateY(-8px)"
+        },
+        "&:hover .light":{
+            transform:"scaleX(1)"
+        }
     },
     ServiceIcon: {
         textAlign: 'center',
+        transform:"translateY(0px)",
+        transition:"transform 0.7s",
+
     },
     Highlight: {
-        height: "1px",
+        height: "2px",
         width:"7rem",
         backgroundColor: 'blue',
-        margin:"0 auto"
-    },
-    HighlightScale: {
-        animationName: "$scaleAnimation",
-        animationTimingFunction: "linear",
-        animationDuration: "0.2s"
-    },
-    "@keyframes scaleAnimation": {
-        "0%": {
-            transform: "scaleX(0.2)",
-        },
-        "25%": {
-            transform:"scaleX(0.4)"
-        },
-        "50%": {
-            transform:"scaleX(0.6)"
-        },
-        "75%": {
-            transform:"scaleX(0.8)"
-        },
-        "100%": {
-            transform: "scaleX(1.0)",
-        },
-    },
-    "@keyframes iconTranslate": {
-        "0%": {
-            transform: "translateY(0px)",
-        },
-        "25%": {
-            transform:"translateY(-2px)"
-        },
-        "50%": {
-            transform:"translateY(-4px)"
-        },
-        "75%": {
-            transform:"translateY(-6px)"
-        },
-        "100%": {
-            transform: "translateY(-8px)",
-        },
+        margin:"0 auto",
+        transform:"scaleX(0)",
+        transition:"transform 0.7s"
     },
     ServiceText: {
         fontSize: '18px',
@@ -91,17 +56,6 @@ const useStyles = makeStyles({
 
 const ServiceItem = () => { 
     const classes = useStyles();
-
-    const checkedarray = new Array(ServiceGroups.length).fill(false);
-    const [fades, setFades] = useState(checkedarray);
-    const AnimateServiceItem = function (i) {
-        fades[i] = true;
-        setFades([...fades]);
-    }
-    const RestoreServiceItem = function (i) {
-        fades[i] = false;
-        setFades([...fades]);
-    }
     return (
         <ThemeProvider theme={theme}>
         <FormControl component="article" fullWidth>
@@ -112,12 +66,12 @@ const ServiceItem = () => {
             <Grid container spacing={8} component="ul">
                 {
                     ServiceGroups.map(function (item,index) {
-                        return (<Grid item xs={12} md={item.Width} component="li" className={classes.ServiceItem} onMouseEnter={() => AnimateServiceItem(index)} onMouseLeave={() => RestoreServiceItem(index)} key={index}>
+                        return (<Grid item xs={12} md={item.Width} component="li" className={classes.ServiceItem} key={index}>
                             <Link to={item.Href} className={classes.AnchorServiceItem}>
-                                    <div className={`${classes.ServiceIcon} ${fades[index] ? classes.Transform : ""}`}>
+                                    <div className={`${classes.ServiceIcon} icon`}>
                                         {item.Icon}
                                     </div>
-                                    <div style={{display:fades[index]?"block":"none"}}className={`${classes.Highlight} ${fades[index]?classes.HighlightScale:""}`}></div>
+                                    <div className={`${classes.Highlight} light`}></div>
                                     <div className={classes.ServiceText}>{item.Text}</div>
                                 </Link>
                                 </Grid>);
