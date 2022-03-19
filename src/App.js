@@ -10,10 +10,12 @@ import Delegation from './Home/Delegation/Index.js';
 import About from './About/Index';
 import TechApplication from './TechApplication/Index.js';
 import CssBaseline from '@mui/material/CssBaseline';
+import CustomHelmet from './CustomHelmet';
 
 function App() {
   return (
     <React.Fragment>
+      <CustomHelmet/>
       <CssBaseline enableColorScheme/>
       <BrowserRouter>
       <Routes>

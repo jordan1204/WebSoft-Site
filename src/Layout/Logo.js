@@ -1,5 +1,5 @@
 import logo from '../img/logo.png';
-import Link from '@mui/material/Link';
+import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -9,13 +9,19 @@ const useStyles = makeStyles({
     },
     CompanyName: {
         color:"white"
+    },
+    Link: {
+        display: 'inline-flex',
+        color: "black",
+        marginLeft: "24px",
+        textDecoration: "none"
     }
   });
 
 const Logo = () => {
     const classes = useStyles();
     return (
-        <Link sx={{ display: 'inline-flex',color:"black",marginLeft:"24px" }} href="/" underline="none">
+        <Link className={classes.Link} to="/" underline="none">
             <div className={classes.Logo}>
               <img src={logo} alt="logo" width="48" height="60"/>
             </div>

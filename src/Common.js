@@ -1,0 +1,1 @@
+export const BASE_TITLE = "匯融科技 | ";
