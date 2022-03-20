@@ -68,9 +68,9 @@ const ServiceItem = () => {
                     ServiceGroups.map(function (item,index) {
                         return (<Grid item xs={12} md={item.Width} component="li" className={classes.ServiceItem} key={index}>
                             <Link to={item.Href} className={classes.AnchorServiceItem}>
-                                    <div className={`${classes.ServiceIcon} icon`}>
+                                    <figure className={`${classes.ServiceIcon} icon`}>
                                         {item.Icon}
-                                    </div>
+                                    </figure>
                                     <div className={`${classes.Highlight} light`}></div>
                                     <div className={classes.ServiceText}>{item.Text}</div>
                                 </Link>

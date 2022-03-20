@@ -2,8 +2,6 @@ import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
 import Tools from '../../ListGroups/Tools';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme} from '@mui/material/styles';
 
 const useStyles = makeStyles({
     LegendText: {
@@ -13,48 +11,24 @@ const useStyles = makeStyles({
         fontSize:"16px"
     },
     Img: {
-        borderWidth: "1px",
-        borderStyle: "solid",
-        borderColor: "#000",
-        borderRadius:"50%"
+        maxWidth: "100%",
+        height:"155px"
     }
   });
 
 const DeveloperTools = () => {
     const classes = useStyles();
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('md'));
     return (
-        <Paper component="fieldset" elevation={6} sx={{marginTop:"50px",marginBottom:"25px"}}>
+        <Paper component="fieldset" elevation={1} sx={{marginTop:"50px",marginBottom:"25px",borderStyle:"none"}}>
             <legend className={classes.LegendText}>開發技能</legend>
-            <Grid container>
+            <Grid container style={{ paddingLeft: "40px", paddingRight: "40px" }} spacing={4}>
                 {
                     Tools.map(function (item,index) {
-                        const itemstyle = {};
-                        if (matches) {
-                            if (index % 4 === 0) {
-                                itemstyle.paddingRight = "10px";
-                            }
-                            else if (index % 4 === 1) {
-                                itemstyle.paddingRight = "10px";
-                                itemstyle.paddingLeft = "10px";
-                            }
-                            else if (index % 4 === 2) {
-                                itemstyle.paddingRight = "10px";
-                                itemstyle.paddingLeft = "10px";
-                            }
-                            else {
-                                itemstyle.paddingLeft = "10px";
-                            }
-                        }
-                        else {
-                            itemstyle.paddingBottom = "10px";
-                        }
                         return (
-                            <Grid item xs={12} md={3} style={itemstyle}>
-                                <div>
-                                    <img src={item.Src} alt={item.Alt} className={classes.Img} height={matches ? "256" : "300"} style={matches ? { width: "100%" } : {width:"80%"}}/>
-                                </div>
+                            <Grid item xs={12} lg={3}  key={index}>
+                                <figure style={{textAlign:"center"}}>
+                                    <img src={item.Src} alt={item.Alt} className={classes.Img} style={{filter: "grayscale(100%)"}}/>
+                                </figure>
                             </Grid>
                         );
                     })
