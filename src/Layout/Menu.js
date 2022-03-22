@@ -14,8 +14,11 @@ const useStyles = makeStyles({
     MenuItem: {
         listStyleType:'none',
     },
-    Nav: {
+    NavMobile: {
         marginBottom: '100px',
+    },
+    NavDesktop: {
+        paddingBottom:"30px"
     }
   });
 
@@ -24,7 +27,7 @@ const Menu = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
     return (
-        <Grid container spacing={2} component="nav" className={classes.Nav}>
+        <Grid container spacing={2} component="nav" className={matches?classes.NavDesktop:classes.NavMobile}>
             {
                 Menus.map(function (item,index) {
                     return (<Grid item xs={12} md={3} component="li" className={classes.MenuItem} key={index}>

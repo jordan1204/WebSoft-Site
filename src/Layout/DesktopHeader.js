@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     Header: {
         width: "100%",
         position: "relative",
-        height:window.screen.width*0.41+'px'
+        backgroundColor:"#bac4e8"
    },
 });
 
@@ -21,6 +21,7 @@ const DesktopHeader = () => {
     const classes = useStyles();
     const bannerlist = [webbanner01, webbanner02,webbanner03,webbanner04,webbanner05];
     return (
+        <>
         <header className={classes.Header}>
             <Logo />
             <Menu />
@@ -30,6 +31,14 @@ const DesktopHeader = () => {
                 transition={2}
             />
         </header>
+        <article style={{width:"100%",position:'relative',height:window.screen.width*0.41+"px",marginBottom:"100px"}}>
+            <BackgroundSlider
+            images={bannerlist}
+            duration={6}
+            transition={2}
+            />
+        </article>
+        </>
     );
 }
 
