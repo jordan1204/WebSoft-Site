@@ -9,7 +9,7 @@ const Index = () => {
             <CustomHelmet title={BASE_TITLE+"技術應用"}/>
             <article>
                 <h2>技術應用</h2>
-                <Divider style={{borderColor:'rgba(0,0,0,0.5)'}}/>
+                <Divider/>
                 <Carousels />
             </article>
         </>

@@ -62,7 +62,7 @@ const ServiceItem = () => {
             <h2>
                 服務項目
             </h2>
-                <Divider style={{borderColor:"rgba(0,0,0,0.5)"}}/>
+            <Divider/>
             <Grid container spacing={8} component="ul">
                 {
                     ServiceGroups.map(function (item,index) {

@@ -10,7 +10,7 @@ const Index = () => {
             <CustomHelmet title={BASE_TITLE+"關於我們"}/>
         <article>
             <h2>關於我們</h2>
-            <Divider style={{borderColor:"rgba(0,0,0,0.5)"}}/>
+            <Divider/>
             <Box component="p" sx={{ marginBottom: "50px" }}>
                 我們是由一群對科技充滿熱情，平均在軟體行業已有超過8年經驗，分別來先於各大軟體公司的成員組成的領導團隊。
                 曾協助國內及大陸地區大中小企業發展數十個項目，由線上購物平台，製造業MES 管理系統，製造業生產設備管理系統，ERP 及MES 系統整合，企業線上教育訓練系統，Dashboard 系統即時訊息顯示，

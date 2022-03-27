@@ -2,7 +2,6 @@ import FormControl from '@mui/material/FormControl';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
 import CustomerGroups from '../ListGroups/Customers';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 
 const useStyles = makeStyles({
@@ -25,18 +24,7 @@ const useStyles = makeStyles({
         fontSize:'18px'
     }
 });
-  
-const theme = createTheme({
-    components: {
-      MuiDivider: {
-        styleOverrides: {
-          root: {
-            borderColor:'rgba(0,0,0,0.5)'
-          },
-        },
-      },
-    },
-});
+
 
 const Customers = () => { 
     const classes = useStyles();
@@ -45,9 +33,7 @@ const Customers = () => {
             <h2>
                 客戶案例
             </h2>
-            <ThemeProvider theme={theme}>
-                <Divider />
-            </ThemeProvider>
+            <Divider />
             <Grid container spacing={2} component="ul">
                 <Grid item xs={12} md={6} lg={2} component="li" className={classes.CustomersItem}>
                     <h3>工廠設備管理系統</h3>
