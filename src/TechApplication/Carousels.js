@@ -19,9 +19,7 @@ const useStyles = makeStyles({
         width:"50%"
     },
     Bordered: {
-        borderStyle: "solid",
-        borderWidth: "2.5px",
-        borderColor:"#ffccc0"
+        borderStyle: "none",
     }
 });
 
