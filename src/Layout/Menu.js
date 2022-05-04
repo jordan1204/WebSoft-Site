@@ -8,7 +8,7 @@ import Menus from '../ListGroups/Menus';
 const useStyles = makeStyles({
     AnchorMenuItem: {
         textDecoration: 'none',
-        color: 'white',
+        color: 'black',
         fontSize: '1.5em',
     },
     MenuItem: {
