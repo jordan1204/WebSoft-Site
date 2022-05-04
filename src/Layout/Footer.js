@@ -54,7 +54,7 @@ const Footer = () => {
                                 連絡電話
                             </div>
                             <div className={classes.PhoneNumber}>
-                                036681293
+                                03-6681293
                             </div> 
                         </Grid>
                     </Grid>

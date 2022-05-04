@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     Header: {
         width: "100%",
         position: "relative",
-        backgroundColor:"#bac4e8"
+        backgroundColor:"#FFFFFF"
    },
 });
 
