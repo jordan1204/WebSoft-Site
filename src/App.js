@@ -10,6 +10,7 @@ import Delegation from './Home/Delegation/Index.js';
 import WMS from './Home/WMS/Index.js';
 import About from './About/Index';
 import TechApplication from './TechApplication/Index.js';
+import ProductIntro from './ProductIntro/Index.js';
 import CssBaseline from '@mui/material/CssBaseline';
 import CustomHelmet from './CustomHelmet';
 import theme from './theme';
@@ -31,6 +32,7 @@ function App() {
             <Route path="/techapplication" element={<TechApplication />} />
             <Route path="/WMS" element={<WMS/>}/>
             <Route path="/Delegation" element={<Delegation/>}/>
+            <Route path="/ProductIntro" element={<ProductIntro/>}/>
         </Route>
       </Routes>
       </BrowserRouter>
