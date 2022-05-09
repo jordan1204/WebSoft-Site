@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLine } from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles({
     Footer: {
@@ -41,7 +43,7 @@ const Footer = () => {
             <footer className={classes.Footer}>
                 <div style={matches ? { width: "60%",margin:"0 auto" } : {width:"100%"}}>
                     <Grid container>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={4}>
                             <div className={classes.Address}>
                                 公司地址
                             </div>
@@ -49,13 +51,16 @@ const Footer = () => {
                                 新竹縣竹北市光明三路62號2F
                             </div> 
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={2}>
                             <div className={classes.Phone}>
                                 連絡電話
                             </div>
                             <div className={classes.PhoneNumber}>
                                 03-6681293
                             </div> 
+                        </Grid>
+                        <Grid item xs={6}>
+                            <a href="https://lin.ee/x4EtxPH" target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faLine} size="3x" color="#00ff00"/></a>
                         </Grid>
                     </Grid>
                     <div className={classes.CopyRight}>

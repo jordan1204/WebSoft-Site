@@ -39,7 +39,7 @@ const TechExplanation = ({ legendtext, explanation,imgs }) => {
                 {explanation}
                 {
                 imgs.map(function(item,index){
-                    return <img key={index} src={item.Src} className={`${matches?classes.ImgMd:classes.ImgXs} ${classes.Img}`}/>
+                    return <img key={index} src={item.Src} alt={item.Alt} className={`${matches?classes.ImgMd:classes.ImgXs} ${classes.Img}`}/>
                 })
             }
             </p>

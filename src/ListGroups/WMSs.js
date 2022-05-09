@@ -9,7 +9,7 @@ const features = [{ Text: "多廠別多庫別功能。" },
 { Text: "包含物料拆併批、禁用物料管制、效期展延…等必備例外管理功能。" },
 { Text: "APP 及 響應式行動介面，可支援手機、平板、PDA…移動裝置。" }];
 
-const TechSpecObj = {Src:TechSpec};
+const TechSpecObj = {Src:TechSpec,Alt:"技術解說"};
 
 const AppDomain = [{ Text: "電子組裝業", InstanceList: [{ Text: "電腦" }, { Text: "PCBA" }, { Text: "電子相關產品" }] },
 { Text: "其他產業", InstanceList: [{ Text: "電線電纜" }, { Text: "食品原料" }, { Text: "化工" }] }];

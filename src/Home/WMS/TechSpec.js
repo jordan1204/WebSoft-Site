@@ -15,7 +15,7 @@ const TechSpec = ()=>{
         <Paper component="fieldset" elevation={1} sx={{marginTop:"50px",marginBottom:"25px",borderStyle:"none"}}>
             <legend className={classes.LegendText}>技術規格</legend>
             <div>
-                <img src={TechSpecObj.Src}/>
+                <img src={TechSpecObj.Src} alt={TechSpecObj.Alt}/>
             </div>
         </Paper>
     );
